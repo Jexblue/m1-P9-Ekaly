@@ -3,33 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ekaly-app": {
+    "mon-application-angular": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:class": {
-          "skipTests": true
-        },
-        "@schematics/angular:component": {
-          "skipTests": true
-        },
-        "@schematics/angular:directive": {
-          "skipTests": true
-        },
-        "@schematics/angular:guard": {
-          "skipTests": true
-        },
-        "@schematics/angular:interceptor": {
-          "skipTests": true
-        },
-        "@schematics/angular:pipe": {
-          "skipTests": true
-        },
-        "@schematics/angular:resolver": {
-          "skipTests": true
-        },
-        "@schematics/angular:service": {
-          "skipTests": true
-        },
         "@schematics/angular:application": {
           "strict": true
         }
@@ -41,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ekaly-app",
+            "outputPath": "dist/mon-application-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -92,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ekaly-app:build:production"
+              "browserTarget": "mon-application-angular:build:production"
             },
             "development": {
-              "browserTarget": "ekaly-app:build:development"
+              "browserTarget": "mon-application-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -103,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ekaly-app:build"
+            "browserTarget": "mon-application-angular:build"
           }
         },
         "test": {
@@ -126,5 +102,5 @@
       }
     }
   },
-  "defaultProject": "ekaly-app"
+  "defaultProject": "mon-application-angular"
 }
