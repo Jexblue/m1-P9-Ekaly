@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { SpinnerComponent } from './shared/spinner/spinner.component';
+
 
 const routes: Routes = [
-  { path: '', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
-  //{path:'', component: LoginComponent},
-  //{path:'register',component: RegisterComponent}
+  //{ path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'error-pages', loadChildren: () => import('./error-pages/error-pages.module').then(m => m.ErrorPagesModule) },
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
