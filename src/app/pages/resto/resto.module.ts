@@ -6,6 +6,8 @@ import { RestoComponent } from './resto.component';
 import { CommandeComponent } from './commande/commande.component';
 import { CrudComponent } from './crud/crud.component';
 import { BeneficeComponent } from './benefice/benefice.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -17,7 +19,10 @@ import { BeneficeComponent } from './benefice/benefice.component';
   ],
   imports: [
     CommonModule,
-    RestoRoutingModule
+    RestoRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgxPaginationModule
   ]
 })
 export class RestoModule { }
