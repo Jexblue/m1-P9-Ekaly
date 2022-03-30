@@ -115,12 +115,55 @@
           <div id="sidebar-menu">
               <!-- Left Menu Start -->
               <ul class="metismenu" id="side-menu">
-
+                <li class="menu-title">Admin</li>
                   <li>
-                      <a href="#" class="waves-effect">
-                          <i class="icon-accelerator"></i><span class="badge badge-success badge-pill float-right"></span> <span> Dashboard </span>
+                      <a [routerLink]="['admin/commande']" >
+                        <i class="icon-accelerator"></i>
+                        <span class="badge badge-success badge-pill float-right"></span>
+                        <span> Commande </span>
                       </a>
                   </li>
+                  <li>
+                    <a [routerLink]="['admin/dashboard']" class="waves-effect">
+                        <i class="icon-accelerator"></i>
+                        <span class="badge badge-success badge-pill float-right"></span>
+                        <span> Tableau de bord </span>
+                    </a>
+                  </li>
+                <li class="menu-title">Livreur</li>
+                <li>
+                  <a [routerLink]="['livreur/alivrer']" class="waves-effect">
+                      <i class="icon-accelerator"></i>
+                      <span class="badge badge-success badge-pill float-right"></span>
+                       <span> plat a livrer </span>
+                  </a>
+                </li>
+                <li class="menu-title">Resto</li>
+                <li>
+                  <a [routerLink]="['resto/commande']" class="waves-effect">
+                      <i class="icon-accelerator"></i>
+                      <span class="badge badge-success badge-pill float-right"></span>
+                      <span> commande en cours </span>
+                  </a>
+                </li>
+                <li>
+                  <a [routerLink]="['resto/crud']" class="waves-effect">
+                    <i class="icon-accelerator"></i>
+                    <span class="badge badge-success badge-pill float-right"></span>
+                    <span> gestion plat </span>
+                  </a>
+              </li>
+              <li>
+                <a [routerLink]="['resto/benefice']" class="waves-effect">
+                  <i class="icon-accelerator"></i><span class="badge badge-success badge-pill float-right"></span> <span> benefice </span>
+              </a>
+                </li>
+                <li class="menu-title">Client</li>
+                <li>
+                  <a [routerLink]="['pages/plats']" class="waves-effect">
+                      <i class="icon-accelerator"></i><span class="badge badge-success badge-pill float-right"></span> <span> liste plat </span>
+                  </a>
+                </li>
 
 
 
@@ -148,3 +191,10 @@
 
 </div>
 <!-- END wrapper -->
+<div class="content-page">
+  <!-- Start content -->
+  <div class="content">
+<router-outlet></router-outlet>
+
+</div>
+</div>
