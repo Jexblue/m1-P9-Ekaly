@@ -1,14 +1,14 @@
 import { HttpClient } from '@angular/common/http';
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import {  Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/service/api.service';
-import { configuartion } from 'src/app/service/configuration';
+
 
 @Component({
   selector: 'app-plats',
   templateUrl: './plats.component.html',
   styleUrls: ['./plats.component.css']
 })
-export class PlatsComponent implements OnInit, AfterViewInit {
+export class PlatsComponent implements OnInit {
 init = true;
 show = true;
 
@@ -38,9 +38,7 @@ show = true;
   constructor(private rest: ApiService, private http: HttpClient) {
 
   }
-  ngAfterViewInit(): void {
 
-  }
   getdata() {
     this.rest.getData().subscribe(
         (object) => {
