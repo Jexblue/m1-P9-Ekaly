@@ -1,0 +1,43 @@
+.contenu{
+  display: flex;
+  flex-wrap: wrap;
+}
+.custom-pagination .page-number{
+  display: inline-block;
+   padding: 5px 12px;
+  background: #eee;
+  margin: 0px 4px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.page-number.current{
+  background: #4CAF50 !important;;
+  color: white;
+  text-align: center;
+}
+
+.page-number span{
+  display: block;
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.pagination-previous,.pagination-next{
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+}
+.pagination-previous,.pagination-next :hover{
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
+}
+.next{
+  font-size: initial !important;
+  cursor: pointer !important;
+}
+

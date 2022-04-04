@@ -1,193 +1,97 @@
-<!-- Begin page -->
-<div id="wrapper">
-
-  <!-- Top Bar Start -->
-  <div class="topbar">
-
-    <!-- LOGO -->
-    <div class="topbar-left">
-      <a href="#" class="logo">
-        <span class="logo-light">
-          <!--<i class="mdi mdi-camera-control"></i>--> E-Kaly
-        </span>
-        <span class="logo-sm">
-          <i class="mdi mdi-camera-control"></i>
-        </span>
-      </a>
-    </div>
-
-    <nav class="navbar-custom">
-      <ul class="navbar-right list-inline float-right mb-0">
-
-
-        <li class="dropdown notification-list list-inline-item">
-          <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button"
-            aria-haspopup="false" aria-expanded="false">
-            <i class="mdi mdi-bell-outline noti-icon"></i>
-            <span class="badge badge-pill badge-danger noti-icon-badge">3</span>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated dropdown-menu-lg px-1">
-            <!-- item-->
-            <h6 class="dropdown-item-text">
-              Notifications
-            </h6>
-            <div class="slimscroll notification-item-list">
-              <!-- item-->
-              <a href="javascript:void(0);" class="dropdown-item notify-item active">
-                <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
-                <p class="notify-details"><b>Your order is placed</b><span class="text-muted">Dummy text of the printing
-                    and typesetting industry.</span></p>
-              </a>
-
-              <!-- item-->
-              <a href="javascript:void(0);" class="dropdown-item notify-item">
-                <div class="notify-icon bg-danger"><i class="mdi mdi-message-text-outline"></i></div>
-                <p class="notify-details"><b>New Message received</b><span class="text-muted">You have 87 unread
-                    messages</span></p>
-              </a>
-
-              <!-- item-->
-              <a href="javascript:void(0);" class="dropdown-item notify-item">
-                <div class="notify-icon bg-info"><i class="mdi mdi-filter-outline"></i></div>
-                <p class="notify-details"><b>Your item is shipped</b><span class="text-muted">It is a long established
-                    fact that a reader will</span></p>
-              </a>
-
-              <!-- item-->
-              <a href="javascript:void(0);" class="dropdown-item notify-item">
-                <div class="notify-icon bg-success"><i class="mdi mdi-message-text-outline"></i></div>
-                <p class="notify-details"><b>New Message received</b><span class="text-muted">You have 87 unread
-                    messages</span></p>
-              </a>
-
-              <!-- item-->
-              <a href="javascript:void(0);" class="dropdown-item notify-item">
-                <div class="notify-icon bg-warning"><i class="mdi mdi-cart-outline"></i></div>
-                <p class="notify-details"><b>Your order is placed</b><span class="text-muted">Dummy text of the printing
-                    and typesetting industry.</span></p>
-              </a>
-
-            </div>
-            <!-- All-->
-            <a href="javascript:void(0);" class="dropdown-item text-center notify-all text-primary">
-              View all <i class="fi-arrow-right"></i>
-            </a>
-          </div>
-        </li>
-
-        <li class="dropdown notification-list list-inline-item">
-          <div class="dropdown notification-list nav-pro-img">
-            <a class="dropdown-toggle nav-link arrow-none nav-user" data-toggle="dropdown" href="#" role="button"
-              aria-haspopup="false" aria-expanded="false">
-              <!--  <img src="assets/images/user-4.jpg" alt="user" class="rounded-circle"> -->
-            </a>
-            <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
-              <!-- item-->
-              <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Profile</a>
-              <a class="dropdown-item" href="#"><i class="mdi mdi-wallet"></i> Wallet</a>
-              <a class="dropdown-item d-block" href="#"><span class="badge badge-success float-right">11</span><i
-                  class="mdi mdi-settings"></i> Settings</a>
-              <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline"></i> Lock screen</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item text-danger" href="#"><i class="mdi mdi-power text-danger"></i> Logout</a>
-            </div>
-          </div>
-        </li>
-
-      </ul>
-
-      <ul class="list-inline menu-left mb-0">
-        <li class="float-left">
-          <button class="button-menu-mobile open-left waves-effect">
-            <i class="mdi mdi-menu"></i>
-          </button>
-        </li>
-
-      </ul>
-
-    </nav>
-
+<div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
+  <div class="c-sidebar-brand d-lg-down-none">
+  <h2>E-Kaly</h2>
   </div>
-  <!-- Top Bar End -->
+  <ul class="c-sidebar-nav">
+  <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
+  <svg class="c-sidebar-nav-icon">
+  <use xlink:href="assets/icons/svg/free.svg#cil-speedometer"></use>
+  </svg> Dashboard</a></li>
+  <li class="c-sidebar-nav-title">Theme</li>
 
-  <!-- ========== Left Sidebar Start ========== -->
-  <div class="left side-menu">
-    <div class="slimscroll-menu" id="remove-scroll">
+  <li  class="menu-title">Admin</li>
+          <li class="c-sidebar-nav-item">
+            <a [routerLink]="['admin/commande']" class="c-sidebar-nav-link">
+              <i class="c-sidebar-nav-item"></i>
 
-      <!--- Sidemenu -->
-      <div id="sidebar-menu">
-        <!-- Left Menu Start -->
-        <ul class="metismenu" id="side-menu">
-          <li class="menu-title">Admin</li>
-          <li>
-            <a [routerLink]="['admin/commande']">
-              <i class="icon-accelerator"></i>
-              <span class="badge badge-success badge-pill float-right"></span>
               <span> Commande </span>
             </a>
           </li>
-          <li>
-            <a [routerLink]="['admin/dashboard']" class="waves-effect">
-              <i class="icon-accelerator"></i>
-              <span class="badge badge-success badge-pill float-right"></span>
+          <li >
+            <a [routerLink]="['admin/dashboard']" class="c-sidebar-nav-link">
+              <i class="c-sidebar-nav-item"></i>
+
               <span> Tableau de bord </span>
             </a>
           </li>
-          <li class="menu-title">Livreur</li>
-          <li>
-            <a [routerLink]="['livreur/alivrer']" class="waves-effect">
-              <i class="icon-accelerator"></i>
-              <span class="badge badge-success badge-pill float-right"></span>
+          <li  class="menu-title">Livreur</li>
+          <li >
+            <a [routerLink]="['livreur/alivrer']"  class="c-sidebar-nav-link">
+              <i class="c-sidebar-nav-item"></i>
               <span> plat a livrer </span>
             </a>
           </li>
-          <li class="menu-title">Resto</li>
-          <li>
-            <a [routerLink]="['resto/commande']" class="waves-effect">
-              <i class="icon-accelerator"></i>
-              <span class="badge badge-success badge-pill float-right"></span>
+          <li  class="menu-title">Resto</li>
+          <li >
+            <a  [routerLink]="['resto/commande']" class="c-sidebar-nav-link">
+              <i class="c-sidebar-nav-item"></i>
+
               <span> commande en cours </span>
             </a>
           </li>
-          <li>
-            <a [routerLink]="['resto/crud']" class="waves-effect">
-              <i class="icon-accelerator"></i>
-              <span class="badge badge-success badge-pill float-right"></span>
+          <li >
+            <a [routerLink]="['resto/crud']" class="c-sidebar-nav-link">
+              <i class="c-sidebar-nav-item"></i>
+
               <span> gestion plat </span>
             </a>
           </li>
-          <li>
-            <a [routerLink]="['resto/benefice']" class="waves-effect">
-              <i class="icon-accelerator"></i><span class="badge badge-success badge-pill float-right"></span> <span>
+          <li >
+            <a [routerLink]="['resto/benefice']" class="c-sidebar-nav-link">
+              <i class="c-sidebar-nav-item"></i> <span>
                 benefice </span>
             </a>
           </li>
           <li class="menu-title">Client</li>
           <li>
-            <a [routerLink]="['pages/plats']" class="waves-effect">
-              <i class="icon-accelerator"></i><span class="badge badge-success badge-pill float-right"></span> <span>
+            <a [routerLink]="['pages/plats']" class="c-sidebar-nav-link">
+              <i class="c-sidebar-nav-item"></i> <span>
                 liste plat </span>
             </a>
           </li>
-        </ul>
 
-      </div>
-      <!-- Sidebar -->
-      <div class="clearfix"></div>
 
-    </div>
-    <!-- Sidebar -left -->
+  </ul>
+  <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent" data-class="c-sidebar-minimized"></button>
+  </div>
+  <div class="c-wrapper c-fixed-components">
+  <header class="c-header c-header-light c-header-fixed c-header-with-subheader">
+  <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar" data-class="c-sidebar-show">
+  <svg class="c-icon c-icon-lg">
+  <use xlink:href="assets/icons/svg/free.svg#cil-menu"></use>
+  </svg>
+  </button><a class="c-header-brand d-lg-none" href="#">
+  E-Kaly</a>
+  <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true">
+  <svg class="c-icon c-icon-lg">
+  <use xlink:href="assets/icons/svg/free.svg#cil-menu"></use>
+  </svg>
+  </button>
+
+  <ul class="c-header-nav ml-auto mr-4">
+  <li class="c-header-nav-item d-md-down-none mx-2"><a class="c-header-nav-link" href="#">
+  <svg class="c-icon">
+  <use xlink:href="assets/icons/svg/free.svg#cil-bell"></use>
+  </svg></a></li>
+
+  <li class="c-header-nav-item dropdown"><a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+  <div class="c-avatar"><img class="c-avatar-img" src="assets/img/avatars/6.jpg" alt="user@email.com"></div>
+  </a>
+  </li>
+  </ul>
+  <div class="c-subheader px-3">
 
   </div>
-  <!-- Left Sidebar End -->
-
-
-</div>
-<!-- END wrapper -->
-<div class="content-page">
-  <!-- Start content -->
-  <div class="content">
-    <router-outlet></router-outlet>
-
+  </header>
+  <router-outlet></router-outlet>
   </div>
-</div>
