@@ -3,23 +3,20 @@
   <h2>E-Kaly</h2>
   </div>
   <ul class="c-sidebar-nav">
-  <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#">
-  <svg class="c-sidebar-nav-icon">
-  <use xlink:href="assets/icons/svg/free.svg#cil-speedometer"></use>
-  </svg> Dashboard</a></li>
-  <li class="c-sidebar-nav-title">Theme</li>
+
+
 
   <li  class="menu-title">Admin</li>
           <li class="c-sidebar-nav-item">
             <a [routerLink]="['admin/commande']" class="c-sidebar-nav-link">
-              <i class="c-sidebar-nav-item"></i>
+              <i class="fas fa-desktop"> </i>
 
               <span> Commande </span>
             </a>
           </li>
           <li >
             <a [routerLink]="['admin/dashboard']" class="c-sidebar-nav-link">
-              <i class="c-sidebar-nav-item"></i>
+              <i class="fas fa-dashboard"></i>
 
               <span> Tableau de bord </span>
             </a>
@@ -27,35 +24,36 @@
           <li  class="menu-title">Livreur</li>
           <li >
             <a [routerLink]="['livreur/alivrer']"  class="c-sidebar-nav-link">
-              <i class="c-sidebar-nav-item"></i>
+              <i class="fa-solid fa-burger"></i>
               <span> plat a livrer </span>
             </a>
           </li>
           <li  class="menu-title">Resto</li>
           <li >
             <a  [routerLink]="['resto/commande']" class="c-sidebar-nav-link">
-              <i class="c-sidebar-nav-item"></i>
+              <i class="fa-solid fa-burger"></i>
 
               <span> commande en cours </span>
             </a>
           </li>
           <li >
             <a [routerLink]="['resto/crud']" class="c-sidebar-nav-link">
-              <i class="c-sidebar-nav-item"></i>
+              <i class="fas fa-tasks"></i>
 
               <span> gestion plat </span>
             </a>
           </li>
           <li >
             <a [routerLink]="['resto/benefice']" class="c-sidebar-nav-link">
-              <i class="c-sidebar-nav-item"></i> <span>
+              <i class="fa fa-dollar" aria-hidden="true"></i>
+              <span>
                 benefice </span>
             </a>
           </li>
           <li class="menu-title">Client</li>
           <li>
             <a [routerLink]="['pages/plats']" class="c-sidebar-nav-link">
-              <i class="c-sidebar-nav-item"></i> <span>
+              <i class="fa-solid fa-burger"></i> <span>
                 liste plat </span>
             </a>
           </li>
@@ -85,7 +83,7 @@
   </svg></a></li>
 
   <li class="c-header-nav-item dropdown"><a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-  <div class="c-avatar"><img class="c-avatar-img" src="assets/img/avatars/6.jpg" alt="user@email.com"></div>
+  <div class="c-avatar"><img class="c-avatar-img" src="" alt="user.jpg"></div>
   </a>
   </li>
   </ul>
