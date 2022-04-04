@@ -2,13 +2,17 @@
   <div class="table-responsive">
     <div class="table-wrapper">
       <div class="table-title">
-        <div class="row">
-          <div class="col-sm-6">
-            <h2>Gérer  <b>Plats</b></h2>
+
+
+          <div >
+            <div style="display: flex; justify-content: space-between;">
+            <diV>
+              <a href="#addEmployeeModal" class="btn btn-success" (click)="openModal()" data-toggle="modal">Ajouter</a>
+            </diV>
+            <div>
+            <a href="#deleteEmployeeModal" class="btn btn-danger" (click)="supprimerTous()" data-toggle="modal">Supprimer</a>
           </div>
-          <div class="col-sm-6">
-            <a href="#addEmployeeModal" class="btn btn-success" (click)="openModal()" data-toggle="modal">Ajouter</a>
-            <a href="#deleteEmployeeModal" class="btn btn-danger" (click)="openModal()" data-toggle="modal">Supprimer</a>
+
           </div>
         </div>
       </div>
@@ -35,12 +39,12 @@
               </span>
             </td>
             <td>{{item.name}}</td>
-            <td>{{item.numero}}</td>
+            <td>{{item.prix}}</td>
             <td>
-              <a  class="edit" data-toggle="modal"  (click)="editModal(item)" >
+              <a style="cursor: pointer;"  class="edit" data-toggle="modal"  (click)="editModal(item)" >
                 <i class="fas fa-edit text-warning" title="Edit"></i></a>
-              <a  class="delete" data-toggle="modal">
-                <i class="fas fa-trash text-danger" data-toggle="tooltip" title="Delete"></i></a>
+              <a  style="cursor: pointer; margin-left: 10px;" class="delete" data-toggle="modal">
+                <i (click)="confirmer(item)" class="fas fa-trash text-danger" data-toggle="tooltip" title="Delete"></i></a>
             </td>
           </tr>
         </tbody>

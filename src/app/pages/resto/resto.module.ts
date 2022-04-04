@@ -8,6 +8,10 @@ import { CrudComponent } from './crud/crud.component';
 import { BeneficeComponent } from './benefice/benefice.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { InsertModalComponent } from './crud/insert-modal/insert-modal.component';
+import { UpdateModalComponent } from './crud/update-modal/update-modal.component';
+import { DeleteModalComponent } from './crud/delete-modal/delete-modal.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -15,14 +19,18 @@ import { NgxPaginationModule } from 'ngx-pagination';
     RestoComponent,
     CommandeComponent,
     CrudComponent,
-    BeneficeComponent
+    BeneficeComponent,
+    InsertModalComponent,
+    UpdateModalComponent,
+    DeleteModalComponent
   ],
   imports: [
     CommonModule,
     RestoRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    ModalModule.forRoot()
   ]
 })
 export class RestoModule { }

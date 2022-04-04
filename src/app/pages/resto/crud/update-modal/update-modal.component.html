@@ -1,0 +1,20 @@
+<div class="modal-header">
+  <h4 class="modal-title">ajout</h4>
+  <button type="button" class="close" aria-label="Close" (click)='modalRef.hide()'>
+    <span aria-hidden="true">x</span>
+  </button>
+</div>
+<form>
+<div class="modal-body">
+
+    <label>Nom</label>
+    <input [(ngModel)]="plat.nom"  name="nom" class="form-control">
+    <label>Prix</label>
+    <input [(ngModel)]="plat.prix" name="adresse" class="form-control">
+
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary">modifier</button>
+  </div>
+  </form>
+
