@@ -7,6 +7,7 @@ import { PlatsComponent } from './plats/plats.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CardComponent } from './plats/card/card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgHttpLoaderModule } from 'ng-http-loader';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NgxPaginationModule,
     FormsModule,
     ReactiveFormsModule,
+    NgHttpLoaderModule.forRoot()
 
   ]
 })

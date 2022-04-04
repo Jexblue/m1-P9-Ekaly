@@ -8,9 +8,9 @@ import { configuartion } from 'src/app/service/configuration';
   templateUrl: './plats.component.html',
   styleUrls: ['./plats.component.css']
 })
-export class PlatsComponent implements OnInit {
-
-
+export class PlatsComponent implements OnInit, AfterViewInit {
+init = true;
+show = true;
 
   ngOnInit(): void {
     this.getdata();
@@ -38,14 +38,18 @@ export class PlatsComponent implements OnInit {
   constructor(private rest: ApiService, private http: HttpClient) {
 
   }
+  ngAfterViewInit(): void {
+
+  }
   getdata() {
     this.rest.getData().subscribe(
         (object) => {
           this.data = object;
+          this.init = false;
+          this.show = false;
         })
 
   };
-
 
 
 
