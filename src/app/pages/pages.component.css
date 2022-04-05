@@ -4,3 +4,9 @@ i{
 span{
   text-transform: uppercase;
 }
+.active{
+  background-color: cadetblue;
+}
+li :hover{
+  background-color: cadetblue;
+}
