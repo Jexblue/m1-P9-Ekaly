@@ -1,95 +1,91 @@
 <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
   <div class="c-sidebar-brand d-lg-down-none">
-  <h2>E-Kaly</h2>
+    <h2>E-Kaly</h2>
   </div>
   <ul class="c-sidebar-nav">
-
-
-
-  <li  class="menu-title">Admin</li>
-          <li class="c-sidebar-nav-item">
-            <a [routerLink]="['admin/commande']" class="c-sidebar-nav-link">
-              <i class="fas fa-desktop"> </i>
-
-              <span> Commande </span>
-            </a>
-          </li>
-          <li >
-            <a [routerLink]="['admin/dashboard']" class="c-sidebar-nav-link">
-              <i class="fas fa-dashboard"></i>
-
-              <span> Tableau de bord </span>
-            </a>
-          </li>
-          <li  class="menu-title">Livreur</li>
-          <li >
-            <a [routerLink]="['livreur/alivrer']"  class="c-sidebar-nav-link">
-              <i class="fa-solid fa-burger"></i>
-              <span> plat a livrer </span>
-            </a>
-          </li>
-          <li  class="menu-title">Resto</li>
-          <li >
-            <a  [routerLink]="['resto/commande']" class="c-sidebar-nav-link">
-              <i class="fa-solid fa-burger"></i>
-
-              <span> commande en cours </span>
-            </a>
-          </li>
-          <li >
-            <a [routerLink]="['resto/crud']" class="c-sidebar-nav-link">
-              <i class="fas fa-tasks"></i>
-
-              <span> gestion plat </span>
-            </a>
-          </li>
-          <li >
-            <a [routerLink]="['resto/benefice']" class="c-sidebar-nav-link">
-              <i class="fa fa-dollar" aria-hidden="true"></i>
-              <span>
-                benefice </span>
-            </a>
-          </li>
-          <li class="menu-title">Client</li>
-          <li>
-            <a [routerLink]="['pages/plats']" class="c-sidebar-nav-link">
-              <i class="fa-solid fa-burger"></i> <span>
-                liste plat </span>
-            </a>
-          </li>
-
-
+    <li class="menu-title">Admin</li>
+    <li class="c-sidebar-nav-item">
+      <a [routerLink]="['admin/commande']" class="c-sidebar-nav-link">
+        <i class="fas fa-desktop"> </i>
+        <span> Commande </span>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['admin/dashboard']" class="c-sidebar-nav-link">
+        <i class="fas fa-dashboard"></i>
+        <span> Tableau de bord </span>
+      </a>
+    </li>
+    <li class="menu-title">Livreur</li>
+    <li>
+      <a [routerLink]="['livreur/alivrer']" class="c-sidebar-nav-link">
+        <i class="fa-solid fa-burger"></i>
+        <span> plat a livrer </span>
+      </a>
+    </li>
+    <li class="menu-title">Resto</li>
+    <li>
+      <a [routerLink]="['resto/commande']" class="c-sidebar-nav-link">
+        <i class="fa-solid fa-burger"></i>
+        <span> commande en cours </span>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['resto/crud']" class="c-sidebar-nav-link">
+        <i class="fas fa-tasks"></i>
+        <span> gestion plat </span>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['resto/benefice']" class="c-sidebar-nav-link">
+        <i class="fa fa-dollar" aria-hidden="true"></i>
+        <span> benefice </span>
+      </a>
+    </li>
+    <li class="menu-title">Client</li>
+    <li>
+      <a [routerLink]="['pages/plats']" class="c-sidebar-nav-link">
+        <i class="fa-solid fa-burger"></i>
+        <span> liste plat </span>
+      </a>
+    </li>
   </ul>
-  <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent" data-class="c-sidebar-minimized"></button>
-  </div>
-  <div class="c-wrapper c-fixed-components">
+  <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent"
+    data-class="c-sidebar-minimized"></button>
+</div>
+<div class="c-wrapper c-fixed-components">
   <header class="c-header c-header-light c-header-fixed c-header-with-subheader">
-  <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar" data-class="c-sidebar-show">
-  <svg class="c-icon c-icon-lg">
-  <use xlink:href="assets/icons/svg/free.svg#cil-menu"></use>
-  </svg>
-  </button><a class="c-header-brand d-lg-none" href="#">
-  E-Kaly</a>
-  <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true">
-  <svg class="c-icon c-icon-lg">
-  <use xlink:href="assets/icons/svg/free.svg#cil-menu"></use>
-  </svg>
-  </button>
+    <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar"
+      data-class="c-sidebar-show">
+      <svg class="c-icon c-icon-lg">
+        <use xlink:href="assets/icons/svg/free.svg#cil-menu"></use>
+      </svg>
+    </button><a class="c-header-brand d-lg-none" href="#">
+      E-Kaly</a>
+    <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar"
+      data-class="c-sidebar-lg-show" responsive="true">
+      <svg class="c-icon c-icon-lg">
+        <use xlink:href="assets/icons/svg/free.svg#cil-menu"></use>
+      </svg>
+    </button>
 
-  <ul class="c-header-nav ml-auto mr-4">
-  <li class="c-header-nav-item d-md-down-none mx-2"><a class="c-header-nav-link" href="#">
-  <svg class="c-icon">
-  <use xlink:href="assets/icons/svg/free.svg#cil-bell"></use>
-  </svg></a></li>
+    <ul class="c-header-nav ml-auto mr-4">
+      <li *ngIf="auth.isNotLogged()" class="c-header-nav-item d-md-down-none mx-2"><a class="c-header-nav-link" href="#">
+          <i class="fas fa-bell"></i></a></li>
+      <li class="c-header-nav-item d-md-down-none mx-2">
+        <a *ngIf="auth.isNotLogged()" [routerLink]="['login']"  class="c-header-nav-link" ><i class="fas fa-sign-in"></i></a>
+      </li>
+      <li *ngIf="!auth.isNotLogged()" class="c-header-nav-item d-md-down-none mx-2"><a (click)="auth.logout()"  class="c-header-nav-link" href="#">
+          <i class="fas fa-sign-out"></i></a></li>
 
-  <li class="c-header-nav-item dropdown"><a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-  <div class="c-avatar"><img class="c-avatar-img" src="" alt="user.jpg"></div>
-  </a>
-  </li>
-  </ul>
-  <div class="c-subheader px-3">
-
-  </div>
+      <li class="c-header-nav-item dropdown"><a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button"
+          aria-haspopup="true" aria-expanded="false">
+          <div class="c-avatar"><img class="c-avatar-img" src="" alt="user.jpg"></div>
+        </a>
+      </li>
+    </ul>
+    <div class="c-subheader px-3">
+    </div>
   </header>
   <router-outlet></router-outlet>
-  </div>
+</div>

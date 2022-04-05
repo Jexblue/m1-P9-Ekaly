@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthentificationService } from '../service/authentification.service';
 
 @Component({
@@ -8,11 +9,18 @@ import { AuthentificationService } from '../service/authentification.service';
 })
 export class PagesComponent implements OnInit {
   auth: AuthentificationService;
-  constructor(service: AuthentificationService) {
+  public router: Router;
+  constructor(service: AuthentificationService, router: Router) {
+    this.router = router;
       this.auth = service;
+      //this.isNotlogged = this.auth.isNotLogged()
    }
 
   ngOnInit(): void {
+  }
+  logout(){
+    this.auth.logout();
+    this.router.navigate(['pages/']);
   }
 
 }

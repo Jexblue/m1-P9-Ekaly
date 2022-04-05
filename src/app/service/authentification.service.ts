@@ -7,10 +7,13 @@ export class AuthentificationService {
 
   constructor() { }
 
-  isLogged(){
-    if(localStorage.getItem('profil')==null){
-      return false;
+  isNotLogged(){
+    if(localStorage.getItem('session')==null){
+      return true;
     }
-    return true;
+    return false;
+  }
+  logout(){
+    localStorage.removeItem('session');
   }
 }
