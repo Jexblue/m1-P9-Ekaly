@@ -7,6 +7,6 @@ span{
 .active{
   background-color: cadetblue;
 }
-li :hover{
+.c-sidebar-nav li :hover{
   background-color: cadetblue;
 }
