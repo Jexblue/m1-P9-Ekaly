@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { AuthentificationService } from '../service/authentification.service';
+import { PanierComponent } from './client/panier/panier.component';
 
 @Component({
   selector: 'app-pages',
@@ -10,7 +12,7 @@ import { AuthentificationService } from '../service/authentification.service';
 export class PagesComponent implements OnInit {
   auth: AuthentificationService;
   public router: Router;
-  constructor(service: AuthentificationService, router: Router) {
+  constructor(service: AuthentificationService, router: Router, public modalRef: BsModalRef, private modalService: BsModalService) {
     this.router = router;
     this.auth = service;
       //this.isNotlogged = this.auth.isNotLogged()
@@ -21,6 +23,15 @@ export class PagesComponent implements OnInit {
   logout(){
     this.auth.logout();
     this.router.navigate(['pages/']);
+  }
+  showPanier(){
+    this.modalRef = this.modalService.show(PanierComponent,  {
+      initialState: {
+
+       // plat: {nom:item.name, prix:item.prix}
+
+      }
+    });
   }
 
 }

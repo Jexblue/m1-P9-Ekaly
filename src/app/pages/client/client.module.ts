@@ -8,6 +8,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { CardComponent } from './plats/card/card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgHttpLoaderModule } from 'ng-http-loader';
+import { PanierComponent } from './panier/panier.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -15,6 +17,7 @@ import { NgHttpLoaderModule } from 'ng-http-loader';
     ClientComponent,
     PlatsComponent,
     CardComponent,
+    PanierComponent,
 
 
   ],
@@ -24,7 +27,8 @@ import { NgHttpLoaderModule } from 'ng-http-loader';
     NgxPaginationModule,
     FormsModule,
     ReactiveFormsModule,
-    NgHttpLoaderModule.forRoot()
+    NgHttpLoaderModule.forRoot(),
+    ModalModule.forRoot()
 
   ]
 })

@@ -12,7 +12,7 @@ export class PlatsComponent implements OnInit {
 action="sakafo";
 init = true;
 show = true;
-
+panier = [];
   ngOnInit(): void {
     this.getdata();
   }
