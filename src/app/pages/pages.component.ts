@@ -12,7 +12,7 @@ export class PagesComponent implements OnInit {
   public router: Router;
   constructor(service: AuthentificationService, router: Router) {
     this.router = router;
-      this.auth = service;
+    this.auth = service;
       //this.isNotlogged = this.auth.isNotLogged()
    }
 

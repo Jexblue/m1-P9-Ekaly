@@ -6,7 +6,7 @@ import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   { path: '', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
-  {path : 'login', component: LoginComponent, canActivate:[LoginGuard]},
+  {path : 'login', component: LoginComponent/*, canActivate:[LoginGuard]*/},
   {path : 'register', component: RegisterComponent}
 
 
