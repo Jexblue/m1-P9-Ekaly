@@ -6,20 +6,20 @@
           S'inscrire
         </span>
         <div class="wrap-input100 validate-input">
-          <input class="input100" type="text"  placeholder="Email">
+          <input class="input100" [(ngModel)]="user.email" name="email" type="text"  placeholder="Email">
           <span class="focus-input100" data-placeholder="&#xf207;"> </span>
         </div>
         <div class="wrap-input100 validate-input" >
-          <input class="input100" type="password"  placeholder="Mot de passe">
+          <input class="input100" [(ngModel)]="user.pwd" name="pwd" type="password"  placeholder="Mot de passe">
           <span class="focus-input100" data-placeholder="&#xf191;"> </span>
         </div>
         <div class="wrap-input100 validate-input" >
-          <input class="input100" type="password"  placeholder="Confirmer mot de passe">
+          <input class="input100" [(ngModel)]="user.pwd2" name="pwd2" type="password"  placeholder="Confirmer mot de passe">
           <span class="focus-input100" data-placeholder="&#xf191;"> </span>
         </div>
         <div class="container-login100-form-btn">
-          <button class="login100-form-btn" type="submit">
-            Connexion
+          <button (click)="register()" class="login100-form-btn" type="submit">
+            S'inscrire
           </button>
 
         </div>

@@ -9,9 +9,10 @@ import { ApiService } from '../service/api.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  user = { email: "", pwd: "" }
+  private action = '/api/login'
+  public user = { email: "", pwd: "" }
   public router: Router;
-  action = '/api/login'
+
   constructor(router: Router, private rest: ApiService, private http: HttpClient) {
     this.router = router;
   }
@@ -20,7 +21,7 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.rest.post(this.action, this.user).subscribe(
+    /*this.rest.post(this.action, this.user).subscribe(
       (response) => {
 
         if (response.status == 200) {
@@ -30,7 +31,8 @@ export class LoginComponent implements OnInit {
           localStorage.setItem("profil",response.data[0].idprofil);
           this.router.navigate(['pages/']);
         }
-      })
+      })*/
+      this.router.navigate(['pages/']);
   }
 
 }
