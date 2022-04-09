@@ -9,13 +9,14 @@ import { ApiService } from 'src/app/service/api.service';
   styleUrls: ['./plats.component.css']
 })
 export class PlatsComponent implements OnInit {
+action="sakafo";
 init = true;
 show = true;
 
   ngOnInit(): void {
     this.getdata();
   }
-  collection = { count: 10, data: [] };
+  collection = { count: 0, data: [] };
   config = {
     id: 'custom',
     itemsPerPage: 5,
@@ -40,14 +41,16 @@ show = true;
   }
 
   getdata() {
-    this.rest.getData().subscribe(
-        (object) => {
-          this.data = object;
-          this.init = false;
-          this.show = false;
-        })
+    this.rest.get(this.action).subscribe(
+      success => {
+        console.log(success.data);
+        this.data = success.data;
+        this.collection.count = success.data.length;
+        this.init = false;
+      },
+      error => console.log(error)
 
-  };
+    )};
 
 
 
