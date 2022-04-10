@@ -5,9 +5,10 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
-  { path: '', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
+  { path: '', redirectTo:'pages', pathMatch: 'full' },
   {path : 'login', component: LoginComponent/*, canActivate:[LoginGuard]*/},
-  {path : 'register', component: RegisterComponent}
+  {path : 'register', component: RegisterComponent},
+  { path: 'pages', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) }
 
 
 ];
