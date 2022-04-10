@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/service/api.service';
 
 @Component({
   selector: 'app-commande',
@@ -6,10 +7,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./commande.component.css']
 })
 export class CommandeComponent implements OnInit {
-
-  constructor() { }
+  action="commande";
+  init = true;
+  show = true;
+  collection = { count: 0, data: [] };
+  data : any[] = [];
+  constructor(private rest: ApiService) { }
 
   ngOnInit(): void {
+    this.getCommande();
   }
 
+  getCommande() {
+    this.rest.get(this.action).subscribe(
+      success => {
+        console.log(success.data);
+        this.data = success.data;
+        this.collection.count = success.data.length;
+        this.init = false;
+      },
+      error => console.log(error)
+
+    )};
 }
