@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { ApiService } from 'src/app/service/api.service';
 import { InsertModalComponent } from './insert-modal/insert-modal.component';
 import { UpdateModalComponent } from './update-modal/update-modal.component';
 
@@ -9,9 +11,15 @@ import { UpdateModalComponent } from './update-modal/update-modal.component';
   styleUrls: ['./crud.component.css']
 })
 export class CrudComponent implements OnInit {
-  ngOnInit(): void {
-  }
-  p=2;
+
+  plat: {nom:"",prix:0 }
+  action="sakafo";
+  collection = { count: 0, data: [] };
+  init = true;
+  show = true;
+  p=1;
+  data : any[] = [];
+  sakafo = {nomPlat:"",coutPlat:0}
     nbrperpage=5;
     total=18;
   //  modalRef: BsModalRef;
@@ -19,9 +27,14 @@ export class CrudComponent implements OnInit {
     checkedList:any;
     masterSelected:boolean;
     modalRef: BsModalRef;
-    constructor(private modalService: BsModalService)  {
+  ngOnInit(): void {
+    this.getdata()
+  }
+
+    constructor(private modalService: BsModalService, private rest: ApiService, private http: HttpClient)  {
       this.masterSelected = false;
-      this.checklist = [
+      this.plat = {nom:"",prix:0 }
+      /*this.checklist = [
         {id:1,name:'Allison Becker',prix:1, isSelected:false},
         {id:2,name:'Andrew Robertson',prix:26, isSelected:false},
         {id:3,name:'Virgil Vandijk',prix:4, isSelected:false},
@@ -40,67 +53,58 @@ export class CrudComponent implements OnInit {
         {id:16,name:'Roberto Firmino',prix:9, isSelected:false},
         {id:17,name:'Divock Origi',prix:27, isSelected:false},
         {id:18,name:'Luis Diaz',prix:23, isSelected:false}
-      ];
+      ];*/
     }
-    checkUncheckAll() {
-      var currentpage = this.p;
-      var indice = currentpage*this.nbrperpage-this.nbrperpage
-      for (var i = 0; i < this.nbrperpage; i++) {
-        this.checklist[indice].isSelected = this.masterSelected;
-        indice++;
-      }
-      this.getCheckedItemList();
-    }
-    UncheckedAll(){
-      this.masterSelected = false;
-      for (var i = 0; i < this.checklist.length; i++) {
-        this.checklist[i].isSelected = false;
-      }
-    }
+
 
     // Check All Checkbox Checked
-    isAllSelected() {
-      this.masterSelected = this.checklist.every(function(item:any) {
-          return item.isSelected == true;
-        })
-      this.getCheckedItemList();
-    }
+
 
     // Get List of Checked Items
-    getCheckedItemList(){
-      this.checkedList = [];
-      for (var i = 0; i < this.checklist.length; i++) {
-        if(this.checklist[i].isSelected)
-        this.checkedList.push(this.checklist[i]);
-      }
-    }
 
 
-    openModal() {
-      this.modalRef = this.modalService.show(InsertModalComponent,  {
+
+    openModal(template: any) {
+      this.modalRef = this.modalService.show(template,  {
         initialState: {
 
         }
       });
     }
-    editModal(item:any){
-      this.modalRef = this.modalService.show(UpdateModalComponent,  {
-        initialState: {
-
-          plat: {nom:item.name, prix:item.prix}
-
-        }
-      });
+    editModal(item:any, content: any){
+      this.openModal(content);
+      this.plat.nom = item.nomPlat;
+      console.log(item);
    }
    confirmer(id: string) {
     if (confirm('valider la suppression')) {
      // this.deleteDevise(id)
     }
   }
-  supprimerTous() {
-    if (confirm('supprimer les élements sélectionner')) {
-     // this.deleteDevise(id)
-    }
-  }
+
+
+  getdata() {
+    this.rest.get(this.action).subscribe(
+      success => {
+        console.log(success.data);
+        this.data = success.data;
+        this.init = false;
+        this.total = success.data.length
+        this.show = false;
+      },
+      error => console.log(error)
+
+    )};
+    insert(){
+      this.rest.post(this.action, this.sakafo).subscribe(
+        success => {
+          console.log(success.data);
+          this.ngOnInit();
+        },
+        error => console.log(error)
+
+      )};
+
+
 
 }
