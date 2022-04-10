@@ -12,7 +12,7 @@ import { UpdateModalComponent } from './update-modal/update-modal.component';
 })
 export class CrudComponent implements OnInit {
 
-  plat: {nom:"",prix:0 }
+  plat: {nomPlat:"",coutPlat:0 }
   action="sakafo";
   collection = { count: 0, data: [] };
   init = true;
@@ -33,7 +33,7 @@ export class CrudComponent implements OnInit {
 
     constructor(private modalService: BsModalService, private rest: ApiService, private http: HttpClient)  {
       this.masterSelected = false;
-      this.plat = {nom:"",prix:0 }
+      this.plat = {nomPlat:"",coutPlat:0 }
       /*this.checklist = [
         {id:1,name:'Allison Becker',prix:1, isSelected:false},
         {id:2,name:'Andrew Robertson',prix:26, isSelected:false},
@@ -73,7 +73,8 @@ export class CrudComponent implements OnInit {
     }
     editModal(item:any, content: any){
       this.openModal(content);
-      this.plat.nom = item.nomPlat;
+      this.plat.nomPlat = item.nomPlat;
+      this.plat.coutPlat = item.coutPlat;
       console.log(item);
    }
    confirmer(id: string) {

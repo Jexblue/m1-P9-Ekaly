@@ -73,7 +73,7 @@
 
 <ng-template #modif>
   <div class="modal-header">
-    <h4 class="modal-title">ajout</h4>
+    <h4 class="modal-title">Modifier</h4>
     <button type="button" class="close" aria-label="Close" (click)='modalRef.hide()'>
       <span aria-hidden="true">x</span>
     </button>
@@ -82,9 +82,9 @@
   <div class="modal-body">
 
       <label>Nom</label>
-      <input [(ngModel)]="plat.nom"  name="nom" class="form-control">
+      <input [(ngModel)]="plat.nomPlat"  name="nom" class="form-control">
       <label>Prix</label>
-      <input [(ngModel)]="plat.prix" name="adresse" class="form-control">
+      <input [(ngModel)]="plat.coutPlat" name="adresse" class="form-control">
 
     </div>
     <div class="modal-footer">
