@@ -70,12 +70,12 @@
     </button>
 
     <ul class="c-header-nav ml-auto mr-4">
-      <li (click)="showPanier()" *ngIf="auth.isNotLogged()" class="c-header-nav-item d-md-down-none mx-2"><a class="c-header-nav-link" href="#">
+      <li (click)="showPanier()" *ngIf="auth.isNotLogged()" class="c-header-nav-item d-md-down-none mx-2"><a class="c-header-nav-link">
         <i class="fa-solid fa-cart-shopping"></i></a></li>
-      <li *ngIf="auth.isNotLogged()" class="c-header-nav-item d-md-down-none mx-2"><a class="c-header-nav-link" href="#">
+      <li *ngIf="auth.isNotLogged()" class="c-header-nav-item d-md-down-none mx-2"><a class="c-header-nav-link" >
           <i class="fas fa-bell"></i></a></li>
       <li class="c-header-nav-item d-md-down-none mx-2">
-        <a *ngIf="auth.isNotLogged()" [routerLink]="['login']"  class="c-header-nav-link" ><i class="fas fa-sign-in"></i></a>
+        <a *ngIf="auth.isNotLogged()" [routerLink]="['../login']"  class="c-header-nav-link" ><i class="fas fa-sign-in"></i></a>
       </li>
       <li *ngIf="!auth.isNotLogged()" class="c-header-nav-item d-md-down-none mx-2"><a (click)="auth.logout()"  class="c-header-nav-link" href="#">
           <i class="fas fa-sign-out"></i></a></li>
