@@ -50,6 +50,7 @@ panier = [];
         this.data = success.data;
         this.collection.count = success.data.length;
         this.init = false;
+        this.show  = false;
       },
       error => console.log(error)
 

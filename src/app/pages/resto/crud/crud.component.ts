@@ -73,6 +73,7 @@ export class CrudComponent implements OnInit {
     }
     editModal(item:any, content: any){
       this.openModal(content);
+
       this.plat.nomPlat = item.nomPlat;
       this.plat.coutPlat = item.coutPlat;
       console.log(item);
