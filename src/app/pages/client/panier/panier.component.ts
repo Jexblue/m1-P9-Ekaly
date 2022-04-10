@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { ApiService } from 'src/app/service/api.service';
 
 @Component({
   selector: 'app-panier',
@@ -7,10 +8,13 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
   styleUrls: ['./panier.component.css']
 })
 export class PanierComponent implements OnInit {
-
-  constructor(public modalRef: BsModalRef) { }
+items :any[] = [];
+  constructor(public modalRef: BsModalRef,private rest: ApiService) {
+      this.items = this.rest.panier;
+   }
 
   ngOnInit(): void {
+
   }
 
 

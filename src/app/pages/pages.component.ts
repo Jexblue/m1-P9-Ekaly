@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { ApiService } from '../service/api.service';
 import { AuthentificationService } from '../service/authentification.service';
 import { PanierComponent } from './client/panier/panier.component';
 
@@ -12,7 +13,7 @@ import { PanierComponent } from './client/panier/panier.component';
 export class PagesComponent implements OnInit {
   auth: AuthentificationService;
   public router: Router;
-  constructor(service: AuthentificationService, router: Router, public modalRef: BsModalRef, private modalService: BsModalService) {
+  constructor(service: AuthentificationService, router: Router, public modalRef: BsModalRef, private modalService: BsModalService, private rest: ApiService) {
     this.router = router;
     this.auth = service;
       //this.isNotlogged = this.auth.isNotLogged()
@@ -32,6 +33,11 @@ export class PagesComponent implements OnInit {
 
       }
     });
+  }
+  ajouter(item:any){
+    console.log(item)
+    alert(item);
+
   }
 
 }

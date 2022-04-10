@@ -12,4 +12,9 @@ export class ClientComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ajouter(item:any){
+    console.log("client");
+   // this.ajouterPanier.emit(item);
+
+  }
 }

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import {  Component, OnInit } from '@angular/core';
+import {  Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ApiService } from 'src/app/service/api.service';
+
 
 
 @Component({
@@ -13,6 +14,7 @@ action="sakafo";
 init = true;
 show = true;
 panier = [];
+@Output() ajouterPanier = new EventEmitter
   ngOnInit(): void {
     this.getdata();
   }
@@ -38,6 +40,7 @@ panier = [];
 
   constructor(private rest: ApiService, private http: HttpClient) {
 
+
   }
 
   getdata() {
@@ -52,7 +55,11 @@ panier = [];
 
     )};
 
-
+    ajouter(item:any){
+      console.log("liste plat");
+      this.ajouterPanier.emit(item);
+      console.log(this.rest.panier);
+    }
 
 
 

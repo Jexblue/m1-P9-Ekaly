@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
+  panier: any[] = [];
   private url = "https://ekalyback.herokuapp.com/";
 
   constructor(private http: HttpClient) { }
@@ -19,6 +20,10 @@ export class ApiService {
 
     return this.http.post(this.url + table, obj );
 
+  }
+
+  ajouterPanier(item:any){
+    this.panier.push(item);
   }
 
 }
