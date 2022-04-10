@@ -1,25 +1,23 @@
-
-
-<div *ngFor="let item of data">
+<div  style="padding: 5px;" *ngFor="let item of data">
   <p>Date : {{item.dateCommande}} </p>
   <p>Client : {{item.client}}</p>
   <p>Livreur :{{item.livreur}}</p>
   <p>Lieu livraison : {{item.adresse}}</p>
-  <table class="table table-striped" border="2px">
-    <tr>
-      <th>Restaurants</th>
-      <th>Plats</th>
-      <th>Prix</th>
-    </tr>
+  <div>
+    <table class="table table-striped" border="2px">
+      <tr>
+        <th>Restaurants</th>
+        <th>Plats</th>
+        <th>Prix</th>
+      </tr>
 
-        <tr  *ngFor="let sakafo of item.sakafo">
-          <th>{{sakafo.restaurant}}</th>
-          <th>{{sakafo.nomPlat}}</th>
-          <th>{{sakafo.prixPlat}}</th>
-        </tr>
+      <tr *ngFor="let sakafo of item.sakafo">
+        <th>{{sakafo.restaurant}}</th>
+        <th>{{sakafo.nomPlat}}</th>
+        <th>{{sakafo.prixPlat}}</th>
+      </tr>
 
-  </table>
-  <hr>
+    </table>
+  </div>
+
 </div>
-
-
